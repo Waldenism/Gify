@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-var topics = ["Frogs", "Super Nintendo", "Capcom", "Street Fighter", "Super Smash Bros.", "Harp", "Chess"]
+var topics = ["Super Nintendo", "Running", "Capcom", "Fitness", "Tax Law", "Street Fighter", "Super Smash Bros.", "Harp", "Chess"]
 
 for (var i = 0; i < topics.length; i++) {
   var $topicButton = $("<button>");
