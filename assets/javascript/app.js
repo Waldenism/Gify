@@ -9,55 +9,42 @@ for (var i = 0; i < topics.length; i++) {
   $("#topicButtons").append($topicButton);
 }
 
-
 $("#topicButtons").on("click", "button", function() {
 
   $("#gifs").empty();
 
-  var item = $(this).data("val");
-
+  var topic = $(this).data("val");
   var key = "eb2a08b4e22049ae890ccf2296deab6c";
-
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + item + "&api_key=" + key + "&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=" + key + "&limit=10";
 
   $.ajax({
     url: queryURL,
     method: "GET"
   }).done(function(response) {
     for (var i = 0; i < 10; i++) {
-      console.log(response);
 
-      //url's for both paused and playing gif
-      var gifStaticURL = response.data[i].images.fixed_height_still.url;
-      var gifPlayURL = response.data[i].images.fixed_height.url;
-      var ratingData = response.data[i].rating;
-
-      var $gifHolder = $("<div>");
-      $gifHolder.addClass("gif-holder");
+      var $gifDiv = $("<div>");
+      $gifDiv.addClass("gif-holder");
 
       var $gif = $("<img>");
       $gif.addClass("gif");
-      $gif.attr("src", gifStaticURL);
-      $gif.attr("data-still", gifStaticURL);
-      $gif.attr("data-animate", gifPlayURL);
-      $gif.attr("alt", item);
-      $gif.attr("data-state", "paused");
+      $gif.attr("src", response.data[i].images.fixed_height_still.url);
+      $gif.attr("data-still", response.data[i].images.fixed_height_still.url);
+      $gif.attr("data-animate", response.data[i].images.fixed_height.url);
+      $gif.attr("alt", topic);
+      $gif.attr("data-state", "still");
 
       var $rating = $("<p>");
       $rating.addClass("rating");
-      $rating.html("<span class='rating-label'>Rating: </span>" + ratingData); 
+      $rating.html("<span class='rating-label'>Rating: </span>" + response.data[i].rating); 
 
-      $gifHolder.append($gif);
-      $gifHolder.append($rating);
-      $("#gifs").append($gifHolder);
-
+      $gifDiv.append($gif);
+      $gifDiv.append($rating);
+      $("#gifs").append($gifDiv);
     }
 
   });
-
 });
-
-
 
 $("#gifs").on("click", ".gif", function() {
       var state = $(this).attr("data-state");
