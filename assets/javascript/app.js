@@ -62,10 +62,10 @@ $("form").on("submit", function(event) {
 
       event.preventDefault();
 
-
-
       var value = $("input").val();
-
+      if (value === ""){
+        return false
+      }
       var $topicButton = $("<button>");
       $topicButton.text(value);
       $topicButton.attr("data-val", value);
