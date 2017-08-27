@@ -24,7 +24,7 @@ $("#topicButtons").on("click", "button", function() {
     for (var i = 0; i < 10; i++) {
 
       var $gifDiv = $("<div>");
-      $gifDiv.addClass("gif-holder");
+      $gifDiv.addClass("gifDiv");
 
       var $gif = $("<img>");
       $gif.addClass("gif");
@@ -61,6 +61,8 @@ $("#gifs").on("click", ".gif", function() {
 $("form").on("submit", function(event) {
 
       event.preventDefault();
+
+
 
       var value = $("input").val();
 
