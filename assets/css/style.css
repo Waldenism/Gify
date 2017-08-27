@@ -1,10 +1,71 @@
-#page {
+#site {
 	padding: 30px;
-	background-color: blue;
-	border:solid green 2px;
+	background-color: lightgreen;
+	border-bottom: solid black 2px;
 }
 #gifs {
-	display: inline;
-	background-color: green;
-	border:solid orange 2px;
+	/*background-color: green;*/
+	/*border:solid orange 2px;*/
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	border-right: 1px solid #232323;
+	padding: 2px;
 }
+.gifDiv {
+	/*border:solid red 2px;*/
+	/*max-width: 200px;*/
+	padding: 10px;
+}
+button {
+	background-color: darkgreen;
+	border-radius:8px;
+	color:orange;
+	/*border:solid orange 1px;*/
+	font-size:2em;
+	padding:5px;
+	margin:5px;
+}
+ul {
+	font-family: 'Merriweather Sans', sans-serif;
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom:10px;
+	background-color: #daa520;
+}
+h3 {
+	font-family: 'Pacifico', cursive;
+	font-size: 3.0em;
+	max-height: 100px;
+	text-align: center;
+	background-color: orange;
+	padding:40px;
+}
+body {
+	/*background-color: lightgreen;*/
+}
+#atTitle {
+	font-family: 'Merriweather Sans', sans-serif;
+	width:300px;
+	font-size: 2em;
+	/*border:solid red 2px;*/
+	text-align: center;
+	background-color:#daa520; 
+	padding: 10px;
+}
+#submit {
+	margin-top: 10px;
+}
+input {
+	font-size: 2em;
+}
+
+
+
+
+
+
+
+

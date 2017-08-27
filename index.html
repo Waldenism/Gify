@@ -5,18 +5,20 @@
   <title>Gify Gif</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
 </head>
 
 <body>
 
-  <div id="page">
+  <div id="site">
 
-    <h3>Gify Gif</h3>
+    <h3>GIFY GIF</h3>
     <ul>
-      <li>Click a button to generate Gifs for that topic.</li>
-      <li>Click a Gif to make it animate.</li>
+      <li>Click button to generate related Gifs.</li>
+      <li>Click Gif to animate.</li>
       <li>Add your own topic buttons!</li>
     </ul>
 
@@ -26,18 +28,20 @@
 
     <div id="topicForm">
       <form>
-        <label for="topic">Add Topic</label><br>
+        <label for="topic"><div id="atTitle">Add Topic</div></label><br>
         <input type="text" name="topic" id="topic">
         <br>
         <button type="submit" id="submit">Submit</button>
       </form>
     </div>
 
-    <br> 
-
-    <div id="gifs"></div>
-
   </div>
+
+  <br>
+
+  <div id="gifs"></div>
+
+  
 
   <!-- Scripts tags -->
   
