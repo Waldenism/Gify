@@ -16,32 +16,18 @@
   <div id="site">
 
     <h3>GIFY GIF</h3>
-    <ul>
-      <li>Click button to generate related Gifs.</li>
-      <li>Click Gif to animate.</li>
-      <li>Add your own topic buttons!</li>
-    </ul>
+    <p id="instructions"> Click buttons to generate related Gifs. Click Gifs to animate them. Add your own topic buttons!</p>
+
+    <form>
+      <input type="text" name="topic" id="topic">
+      <button type="submit" id="submit">Add Topic</button>
+    </form>
 
     <div id="topicButtons"></div>
 
-    <br>
-
-    <div id="topicForm">
-      <form>
-        <label for="topic"><div id="atTitle">Add Topic</div></label><br>
-        <input type="text" name="topic" id="topic">
-        <br>
-        <button type="submit" id="submit">Submit</button>
-      </form>
-    </div>
-
   </div>
 
-  <br>
-
   <div id="gifs"></div>
-
-  
 
   <!-- Scripts tags -->
   
